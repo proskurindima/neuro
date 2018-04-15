@@ -1,0 +1,51 @@
+$gren_main: #45d380
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	font-family: sans-serif
+.main_wrapper
+	overflow: hidden
+.ai_head
+	position: relative
+	.ai_head_bcg 
+		width: 100%
+	.main_title, .ai_head_text
+		position: absolute
+		padding-left: 40px	
+	.main_title
+		top: 0px
+		left: 0px
+	.ai_head_text
+		top: 40%
+		width: 40%
+.ai_items
+	padding: 70px 15%
+	.ai_item
+		width: 100%
+		font-size: 0px
+		display: flex
+		padding: 20px 0px
+		justify-content: space-around
+	.ai_item_img, .ai_item_text
+		width: 50%
+		padding: 0px 20px
+	.ai_item_img img
+		width: 100%
+	.ai_item_text
+		font-size: 20px
+		.ai_item_text_title
+			color: $gren_main
+			font-size: 25px
+			margin-bottom: 20px	
+		.ai_item_text_content
+			font-size: 18px	
+			font-weight: bold
+			color: #333
+	img[src*="ffp"]
+		width: 50%
+	.ai_item:nth-child(even)
+		.ai_item_img
+			order: 2
+		.ai_item_text
+			order: 1
