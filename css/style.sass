@@ -1,9 +1,9 @@
 @font-face 
   font-family: "Circe"
   src: url("../fonts/Circe-Regular.woff") format("woff"), url("../fonts/Circe-Bold.woff") format("woff")
-$green_main: #21b355
-$black: #0d0d0d
-$gray: #757575
+$green_main: #00b449
+$black: #050505
+$gray: #767676
 *
 	padding: 0
 	margin: 0
@@ -227,6 +227,72 @@ $gray: #757575
 			line-height: 1.2
 		.main_with_text
 			font-size: 16px
+.main_service
+	width: 100%
+	padding: 50px 4.3%
+	font-size: 0px
+	.main_service_items
+		display: flex
+		flex-wrap: no-wrap
+		align-items: center
+		justify-content: space-between	
+		.main_service_item:nth-child(2)
+			.main_service_item_gradient
+			   	background-image: linear-gradient(180deg, rgba( 0, 180,73,0.7), rgba( 118, 118,118,0.7))
+		.main_service_item:nth-child(3)
+			margin-right: 0px
+			.main_service_item_gradient
+				background-image: linear-gradient(180deg, rgba( 0, 180,73,0.7), rgba( 255, 255,255,0.7))	
+		.main_service_item
+			width: calc(33.33% - 20px)
+			margin-right: 30px
+			text-decoration: none
+			position: relative
+			top: 0
+			left: 0
+			transition: .4s
+			text-align: center
+			box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+			.main_service_item_gradient
+				position: absolute	
+				top: 0
+				left: 0
+				background-image: linear-gradient(180deg, rgba( 0, 180,73,0.7), rgba( 243, 129,129,0.7))
+				width: 100%	
+				height: 100%
+				opacity: 0
+				transition: .4s
+				.main_service_item_gradient_text
+					position: absolute
+					top: 50%
+					left: 0
+					padding: 20px
+					transform: translate(0, -50%)
+					text-align: center
+					p
+						font-size: 16px	
+						color: black
+			.main_service_item_img
+				background-color: $gray
+				img
+					width: 100%
+					background-color: #eeeeee
+			.main_service_item_title
+				font-size: 22px
+				font-weight: bold
+				color: $green_main
+				position: absolute
+				top: 50%
+				left: 0
+				padding: 20px
+				transform: translate(0, -50%)
+				text-align: center
+		.main_service_item:hover
+			top: -15px
+			left: -15px
+			.main_service_item_gradient
+				opacity: 1
+
 
 
 
