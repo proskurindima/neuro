@@ -48,10 +48,7 @@ $gray: #767676
 		justify-content: space-between
 		align-items: center
 		background-color: #fff
-		.logo
-			width: 19.4%
-			img
-				width: 100%
+		
 		.main_nav
 			ul
 				li
@@ -63,6 +60,7 @@ $gray: #767676
 						font-size: 21px
 						color: $black
 						text-decoration: none
+						transition: color .2s ease-in-out
 					a:hover
 						color: $green_main
 .main_head
@@ -108,7 +106,6 @@ $gray: #767676
 			vertical-align: middle
 			margin-left: 7px
 			display: inline-block
-
 .main_about
 	width: 100%
 	font-size: 0
@@ -133,6 +130,8 @@ $gray: #767676
 			width: 50%
 		.main_about_img
 			padding-right: 15px
+			img
+				width: 100%	
 		.main_about_text
 			padding-left: 15px
 .main_use
@@ -180,11 +179,10 @@ $gray: #767676
 				width: 20px
 				height: 20px
 				box-shadow: inset 0px 1px 3px 0px rgba(13, 13, 13, 0.5)
-				transition: .2s
+				transition: background-color .2s ease-in-out
 				background-color: #fff
 			input:checked + .checkbox_text:before 
-				background: $green_main
-				box-shadow: inset 0px 1px 3px 0px rgba(13, 13, 13, 0.5);
+				background-color: $green_main
 		button
 			height: 50px
 			width: 130px
@@ -211,6 +209,9 @@ $gray: #767676
 		flex-wrap: wrap
 		align-items: top
 		justify-content: space-between
+	.main_with_item:nth-child(4)
+		.main_with_img
+			width: 45.6%
 	.main_with_item
 		width: 21.37%
 		text-align: center
@@ -229,20 +230,15 @@ $gray: #767676
 			font-size: 16px
 .main_service
 	width: 100%
-	padding: 50px 4.3%
+	padding: 0px 4.3% 100px 4.3%
 	font-size: 0px
 	.main_service_items
 		display: flex
 		flex-wrap: no-wrap
 		align-items: center
-		justify-content: space-between	
-		.main_service_item:nth-child(2)
-			.main_service_item_gradient
-			   	background-image: linear-gradient(180deg, rgba( 0, 180,73,0.7), rgba( 118, 118,118,0.7))
+		justify-content: space-between
 		.main_service_item:nth-child(3)
 			margin-right: 0px
-			.main_service_item_gradient
-				background-image: linear-gradient(180deg, rgba( 0, 180,73,0.7), rgba( 255, 255,255,0.7))	
 		.main_service_item
 			width: calc(33.33% - 20px)
 			margin-right: 30px
@@ -257,7 +253,7 @@ $gray: #767676
 				position: absolute	
 				top: 0
 				left: 0
-				background-image: linear-gradient(180deg, rgba( 0, 180,73,0.7), rgba( 243, 129,129,0.7))
+				background-image: linear-gradient(180deg, rgba( 0, 180,73,0.7), rgba( 255, 255,255,0.7))
 				width: 100%	
 				height: 100%
 				opacity: 0
@@ -270,30 +266,67 @@ $gray: #767676
 					transform: translate(0, -50%)
 					text-align: center
 					p
-						font-size: 16px	
+						font-size: 18px	
 						color: black
 			.main_service_item_img
 				background-color: $gray
+				opacity: .8
 				img
 					width: 100%
 					background-color: #eeeeee
 			.main_service_item_title
 				font-size: 22px
 				font-weight: bold
-				color: $green_main
 				position: absolute
-				top: 50%
-				left: 0
 				padding: 20px
-				transform: translate(0, -50%)
-				text-align: center
+				text-align: left
+				bottom: -10px
+				left: 0
+				transition: .4s
+				opacity: 1
+				ine-height: 1.2
+				span
+					font-size: 16px
+					border-bottom: 2px solid #000
+					line-height: 1.2
+					opacity: 1
 		.main_service_item:hover
 			top: -15px
 			left: -15px
 			.main_service_item_gradient
 				opacity: 1
-
-
+			.main_service_item_title
+				opacity: .5
+.main_partner
+	padding: 0px 4.3% 150px 4.3%
+	font-size: 0px
+	clear: both
+	.partner_items
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		align-content: center	
+		.partner_item
+			position: relative
+			padding-right: auto
+			img[src*="hover"]
+				position: absolute
+				top: 0
+				left: 0
+				opacity: 0
+				transition: opacity .4s ease-in-out
+		.partner_item:hover
+			img[src*="hover"]
+				opacity: 1	
+	.partner_more
+		float: right
+		margin-top: 22px
+		border-bottom: 1px solid $green_main	
+		a
+			color: $green_main
+			text-decoration: none
+			font-size: 18px
 
 
 
