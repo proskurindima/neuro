@@ -12,7 +12,6 @@ $gray: #767676
 	color: $black
 .main_wrapper
 	overflow: hidden
-	margin-bottom: 600px
 	.main_text_title
 		display: inline-block
 		p
@@ -33,6 +32,62 @@ $gray: #767676
 		font-weight: bold
 		line-height: 1.2
 		margin-bottom: 25px
+	.main_use_form, .feedback_form
+		margin-left: 15px
+		background-color: #fff
+		position: relative
+		z-index: 3
+		padding: 55px 70px
+		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+		.forma_group
+			margin-bottom: 25px
+			input
+				border: 0px
+				outline: 0px
+				border-bottom: 1px solid $gray
+				width: 100%
+				font-size: 18px
+				color: $black
+		.checkbox
+			input
+				position: absolute
+				z-index: -1
+				opacity: 0
+				margin: 10px 0 0 20px
+			.checkbox_text 
+				position: relative
+				padding: 0 0 0 60px
+				cursor: pointer
+				font-size: 16px
+				color: $black
+			.checkbox_text:before 
+				content: ''
+				position: absolute
+				left: 0
+				width: 20px
+				height: 20px
+				box-shadow: inset 0px 1px 3px 0px rgba(13, 13, 13, 0.5)
+				transition: background-color .2s ease-in-out
+				background-color: #fff
+			input:checked + .checkbox_text:before 
+				background-color: $green_main
+		button
+			height: 50px
+			width: 130px
+			background-color: $green_main
+			border: 0px
+			cursor: pointer
+			margin-top: 30px
+			p
+				font-size: 18px
+				text-align: center
+				color: #fff
+		button:hover
+			transform: scale( 1.1)
+			transition: .3s
+			p
+				font-size: 21px
+				transition: .3s
 .header_wrapper
 	width: 100%
 	padding: 25px 4.3%
@@ -48,7 +103,6 @@ $gray: #767676
 		justify-content: space-between
 		align-items: center
 		background-color: #fff
-		
 		.main_nav
 			ul
 				li
@@ -144,62 +198,6 @@ $gray: #767676
 		width: 50%
 	.main_use_text
 		margin-right: 15px
-	.main_use_form
-		margin-left: 15px
-		background-color: #fff
-		position: relative
-		z-index: 3
-		padding: 55px 70px
-		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
-		.forma_group
-			margin-bottom: 25px
-			input
-				border: 0px
-				outline: 0px
-				border-bottom: 1px solid $gray
-				width: 100%
-				font-size: 18px
-				color: $gray
-		.checkbox
-			input
-				position: absolute
-				z-index: -1
-				opacity: 0
-				margin: 10px 0 0 20px
-			.checkbox_text 
-				position: relative
-				padding: 0 0 0 60px
-				cursor: pointer
-				font-size: 16px
-				color: $black
-			.checkbox_text:before 
-				content: ''
-				position: absolute
-				left: 0
-				width: 20px
-				height: 20px
-				box-shadow: inset 0px 1px 3px 0px rgba(13, 13, 13, 0.5)
-				transition: background-color .2s ease-in-out
-				background-color: #fff
-			input:checked + .checkbox_text:before 
-				background-color: $green_main
-		button
-			height: 50px
-			width: 130px
-			background-color: $green_main
-			border: 0px
-			cursor: pointer
-			margin-top: 30px
-			p
-				font-size: 18px
-				text-align: center
-				color: #fff
-		button:hover
-			transform: scale( 1.1)
-			transition: .3s
-			p
-				font-size: 21px
-				transition: .3s
 .main_with
 	width: 100%
 	padding: 100px 4.3%
@@ -309,7 +307,6 @@ $gray: #767676
 		align-content: center	
 		.partner_item
 			position: relative
-			padding-right: auto
 			img[src*="hover"]
 				position: absolute
 				top: 0
@@ -327,10 +324,63 @@ $gray: #767676
 			color: $green_main
 			text-decoration: none
 			font-size: 18px
-
-
-
-
+.main_feedback
+	padding: 0px 4.3% 100px 4.3%
+	position: relative
+	display: flex
+	align-content: center
+	border-bottom: 2px solid $green_main
+	.feedback_text, .feedback_map
+		width: calc(50% - 15px)
+	.feedback_text
+		margin-right: 15px
+		padding: 20px 0px
+		.feedback_form
+			box-shadow: none
+			padding: 0px 29.82% 0px 0px
+			margin-left: 0	
+			background-color: transparent
+			input
+				background-color: transparent
+	.feedback_map
+		margin-left: 15px	
+ 		background-color: rgb(255, 255, 255)
+		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+		position: relative	
+		z-index: 3
+		.ymaps-2-1-62-map-copyrights-promo
+			padding-bottom 100px
+		.feedback_map_info
+			position: absolute	
+			background-color: rgba(255, 255, 255, .75)
+			bottom: 0
+			left: 0
+			width: 100%
+			padding: 20px
+			p
+				font-size: 16px	
+				line-height: 1.2
+				font-weight: bold
+				span
+					font-weight: bold
+					color: $green_main
+	.feedback_bcg
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 64.5%
+		img
+			width: 100%
+.main_footer
+	padding: 0px 9.76%
+	width: 100%
+	height: 90px
+	.footer
+		display: flex
+		justify-content: space-between	
+		align-items: center
+		height: 100%
+		font-size: 16px
 
 
 
