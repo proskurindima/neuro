@@ -12,6 +12,7 @@ $gray: #767676
 	color: $black
 .main_wrapper
 	overflow: hidden
+	width: 100%
 	.main_text_title
 		display: inline-block
 		p
@@ -88,6 +89,26 @@ $gray: #767676
 			p
 				font-size: 21px
 				transition: .3s
+	.next, .prev
+		position: absolute
+		display: block
+		width: 20px
+		height: 20px
+		border-top: 4px solid #d0d0d0
+		border-right: 4px solid #d0d0d0
+		cursor: pointer
+	.next 
+		transform: rotate(45deg)
+		right: 0
+		margin-right: 25px
+		top: 50%
+	.prev 
+		transform: rotate(-135deg)
+		left: 0
+		top: 50%
+		margin-left: 25px
+		transform: translate(-50% 0)
+
 .header_wrapper
 	width: 100%
 	padding: 25px 4.3%
@@ -103,6 +124,9 @@ $gray: #767676
 		justify-content: space-between
 		align-items: center
 		background-color: #fff
+		.logo
+			display: flex
+			align-items: center
 		.main_nav
 			ul
 				li
@@ -304,7 +328,9 @@ $gray: #767676
 		justify-content: space-between
 		align-items: center
 		flex-wrap: wrap
-		align-content: center	
+		align-content: center
+		position: relative	
+		z-index: 3	
 		.partner_item
 			position: relative
 			img[src*="hover"]
@@ -381,6 +407,112 @@ $gray: #767676
 		align-items: center
 		height: 100%
 		font-size: 16px
+
+.partner_head
+	margin-top: 200px
+	display: flex
+	flex-wrap: nowrap
+	align-items: center
+	justify-content: space-between
+	padding: 0 4.3%
+	width: 100%
+	font-size: 0px
+	.slick-slider .slick-track, .slick-slider .slick-list
+		display: flex
+		align-items: center
+		width: 100%
+	.partner_head_left, .partner_head_right
+		width: calc(50% - 15px)
+	.partner_head_left
+		margin-right: 15px
+		position: relative
+		z-index: 3
+		.partner_head_ipad
+			width: 75.44%
+			margin-right: auto
+			margin-left: auto
+			position: relative
+			.ipad_items
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 83.56%
+				height: 88.12%
+				background-color: #fff
+				display: flex
+				justify-content: center
+				align-items: center
+				.ipad_item
+					position: absolute
+					width: 83.56%
+					display: flex
+					justify-content: center
+			.ipad_img
+				width: 100%
+	.partner_head_right
+		margin-left: 15px
+.partner_info
+	padding: 100px 4.3%
+	width: 100%
+	font-size: 0px
+	display: flex
+	position: relative
+	.main_circle_img
+		position: absolute
+		z-index: 2
+		right: 0
+		transform: translate(0, -41.15%)
+		width: 66.8%
+		img
+			width: 100%
+	.partner_info_left, .partner_info_right
+		width: calc(50% - 15px)
+	.partner_info_left
+		margin-right: 15px
+		.slick-slider .slick-track, .slick-slider .slick-list
+			height: 200px
+			width: 100%
+		.partner_logo_items
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
+			align-content: center
+			position: relative	
+			z-index: 3	
+			.partner_logo_item
+				position: relative
+				width: 33.33%
+				display: flex
+				justify-content: center
+				align-items: center
+				margin-bottom: 40px
+				img[src*="hover"]
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					opacity: 0
+					transition: opacity .4s ease-in-out
+			.partner_logo_item:hover
+				img[src*="hover"]
+					opacity: 1	
+	.partner_info_right
+		margin-left: 15px
+		.main_use_form
+			padding-top: 30px
+			padding-bottom: 30px
+	.partner_info_bcg
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 64.5%
+		img
+			width: 100%
+
+
+
 
 
 
