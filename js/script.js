@@ -13,3 +13,19 @@ $('.ipad_items').slick({
  		prevArrow: $('.prev'),
   		nextArrow: $('.next'),
 	});
+
+//Функция Popup
+    function show(state){
+            document.getElementById('window').style.display = state;            
+            document.getElementById('wrap').style.display = state;             
+    }
+
+
+$(window).scroll(function(){
+    if ($(window).scrollTop() > 250) {
+        $('.header_wrapper').addClass('scroll');
+    }
+    else {
+        $('.header_wrapper').removeClass('scroll')
+    }
+});

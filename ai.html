@@ -27,7 +27,79 @@
 			<p class="main_title">Искусственный интеллект</p>
 			<p class="ai_head_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolore excepturi nam tenetur aliquam, maiores natus corporis asperiores alias sunt cupiditate, et consequatur accusamus dolor rem consequuntur molestias. Necessitatibus, quasi.</p>
 		</div>
+		<div class="main_use">
+			<div class="main_use_text">
+				<div class="main_text_title">				
+					<p>Как применяются наши продукты</p>
+					<div class="main_line"></div>
+				</div>
+				<div class="main_text_content">
+						<p>Не секрет, что практически в каждом бизнесе очень важную роль имеет человеческий фактор. Но и он же является частой причиной убытков и низкой эффективности работы компании. 
+						</p>
+						<p>Наши продукты усиливают контроль за качеством и уменьшают значимость человека на различных этапах рабочего процесса при помощи автоматизированных систем. В основе таких систем лежат заранее обученные и настроенные под вашу компанию алгоритмы.</p>
+				</div>
+			</div>
+			<div class="main_use_form">
+				<p class="form_title">Узнать более подробную информацию</p>
+				<form action="">
+					<div class="forma_group">
+						<input type="text" name="name" placeholder="Ваше имя">
+					</div>
+					<div class="forma_group">
+						<input type="text" name="phone_number" placeholder="Ваш номер телефона">
+					</div>
+					<label class="checkbox">
+  					<input type="checkbox">
+  					<div class="checkbox_text">Я соглашаюсь на обработку моих данных</div>
+					</label>
+					<button><p>Отправить</p></button>
+				</form>
+			</div>
+		</div>
+		<div class="main_with">
+			<div class="main_with_items">
+				<div class="main_with_item">
+					<div class="main_with_img"><img src="img/factory.png" alt=""></div>
+					<div class="main_with_title">Производство</div>
+					<div class="main_with_text">Усиливаем контроль за качеством и работой сотрудников</div>
+				</div>
+				<div class="main_with_item">
+					<div class="main_with_img"><img src="img/cinema.png" alt=""></div>
+					<div class="main_with_title">Кинотеатры</div>
+					<div class="main_with_text">Собираем статистику посещений и выявляем нарушителей</div>
+				</div>
+				<div class="main_with_item">
+					<div class="main_with_img"><img src="img/coffe.png" alt=""></div>
+					<div class="main_with_title">Кофейни</div>
+					<div class="main_with_text">Превращаем посетителей в постоянных клиентов</div>
+				</div>
+				<div class="main_with_item">
+					<div class="main_with_img"><img src="img/shop.png" alt=""></div>
+					<div class="main_with_title">Магазины</div>
+					<div class="main_with_text">Приводим клиентов в заведение, увеличиваем продажи</div>
+				</div>
+			</div>
+		</div>
 		<div class="ai_info">
+			<div class="ai_info_popup" id="wrap" onclick="show('none')"></div>
+			<div class="popup_form" id="window">
+					<span onclick="show('none')" class="close"></span>
+					<p class="form_title">Заказать Консультацию</p>
+					<form action="">
+					<div class="forma_group">
+						<input type="text" name="name" placeholder="Ваше имя">
+					</div>
+					<div class="forma_group">
+						<input type="text" name="phone_number" placeholder="Ваш номер телефона">
+					</div>
+					<label class="checkbox">
+  					<input type="checkbox">
+  					<div class="checkbox_text">Я соглашаюсь на обработку моих данных</div>
+					</label>
+					<button><p>Отправить</p></button>
+				</form>
+			</div>
+			</a>
 			<div class="ai_items">
 				<div class="ai_item">
 					<div class="ai_item_img"><img src="img/ai/advertle-new.png" alt=""></div>
@@ -47,6 +119,9 @@
 							</ul>
                         Сферы применения:  ТЦ, лифты, фитнес-центры, витрины, автозаправки и др. 	</p>
 						</div>
+						<div onclick="show('block')" class="ai_item_button">
+							<p>Консультация</p>
+						</div>
 					</div>
 				</div>
 				<div class="ai_item">
@@ -59,6 +134,9 @@
 					<div class="main_text_content">
 						<p>Система контроля за посетителями кинозала.</p>
 						<p>Отслеживает местоположение каждого зрителя, следит за его перемещениями во время сеанса, сверяет число проданных билетов с количеством проданных мест, предоставляет отчеты с желаемой периодичностью о динамике посещений и возможных нарушениях.</p>
+						<div onclick="show('block')" class="ai_item_button">
+							<p>Консультация</p>
+						</div>
 					</div>
 				</div>
 				</div>
@@ -72,6 +150,9 @@
 					<div class="main_text_content">
 						<p>Система высокоточной бесконтактной идентификации клиентов</p>
 						<p>Распознает человека при помощи камеры на значительных расстояниях, ведет статистику посещений каждого клиента. Повышает лояльность посетителей и усиливает контроль в целях противодействия мошенничеству.</p>
+						<div onclick="show('block')" class="ai_item_button">
+							<p>Консультация</p>
+						</div>
 					</div>
 				</div>
 				</div>
@@ -85,6 +166,9 @@
 					<div class="main_text_content">
 						<p>Система разграничения доступа для персонала.</p>
 						<p>Распознает каждого сотрудника, хранит и выводит всю информацию о его перемещениях по территории предприятия. В случаях выявления неправомерного нахождения человека в помещении незамедлительно сообщает об этом службе безопасности. </p>
+						<div onclick="show('block')" class="ai_item_button">
+							<p>Консультация</p>
+						</div>
 					</div>
 				</div>
 				</div>
@@ -105,6 +189,9 @@
 							<li>Повышение эффективности акций</li>
 							<li>Получение обширной статистики об аудитории каждого заведения</li>
 						</ul></p>
+						<div onclick="show('block')" class="ai_item_button">
+							<p>Консультация</p>
+						</div>
 					</div>
 				</div>
 				</div>
@@ -116,7 +203,7 @@
 						<div class="main_line"></div>
 					</div>
 					<div class="main_text_content">
-							<p>Распознает автомобили и спец.транспорт вблизи шлагбаумов, позволяя снизить расходы за обслуживание контрольно пропускных пунктов. Транспортные средства разделяются на несколько категорий:
+						<p>Распознает автомобили и спец.транспорт вблизи шлагбаумов, позволяя снизить расходы за обслуживание контрольно пропускных пунктов. Транспортные средства разделяются на несколько категорий:
 							<ul>
 								<li>Гражданские автомобили</li>
 								<li>Такси</li>
@@ -126,6 +213,9 @@
 								<li>Курьерская доставка</li>
 							</ul>	
                    		 </p>
+						<div onclick="show('block')" class="ai_item_button">
+							<p>Консультация</p>
+						</div>
 					</div>
 				</div>
 				</div>
@@ -141,6 +231,6 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/slick/slick.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>

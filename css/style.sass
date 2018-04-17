@@ -4,6 +4,7 @@
 $green_main: #00b449
 $black: #050505
 $gray: #767676
+$red: #d11b1b
 *
 	padding: 0
 	margin: 0
@@ -33,7 +34,7 @@ $gray: #767676
 		font-weight: bold
 		line-height: 1.2
 		margin-bottom: 25px
-	.main_use_form, .feedback_form
+	.main_use_form, .feedback_form, .popup_form
 		margin-left: 15px
 		background-color: #fff
 		position: relative
@@ -86,9 +87,6 @@ $gray: #767676
 		button:hover
 			transform: scale( 1.1)
 			transition: .3s
-			p
-				font-size: 21px
-				transition: .3s
 	.next, .prev
 		position: absolute
 		display: block
@@ -116,6 +114,7 @@ $gray: #767676
 	top: 0
 	left: 0
 	z-index: 4
+	transition: .4s
 	.header
 		padding: 0px 70px
 		height: 75px
@@ -141,6 +140,8 @@ $gray: #767676
 						transition: color .2s ease-in-out
 					a:hover
 						color: $green_main
+.scroll
+	padding-top: 0
 .main_head
 	width: 100%
 	position: relative
@@ -523,6 +524,7 @@ $gray: #767676
 .ai_head
 	position: relative
 	font-size: 0
+	margin-bottom: 100px
 	.ai_head_bcg 
 		width: 100%
 	.main_title, .ai_head_text
@@ -538,10 +540,49 @@ $gray: #767676
 		width: 40%
 		font-size: 18px
 .ai_info
-	padding: 50px 4.3% 
+	padding: 0px 4.3% 50px 4.3%
 	border-bottom: 2px solid $green_main
+	.ai_info_popup
+		position: fixed
+		z-index: 10
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		display: none
+		padding: 0
+		background-color: rgba(0, 0, 0, .2)
+	.popup_form
+		position: fixed
+		top: 50%
+		left: 50%
+		display: none
+		transform: translate(-50%, -50%)
+		width: 60%
+		margin-left: 0
+		z-index: 11
+		.close
+			position: absolute
+			right: 32px
+			top: 32px
+			width: 32px
+			height: 32px
+			cursor: pointer
+		.close:before, .close:after 
+			position: absolute
+			left: 15px
+			content: ' '
+			height: 33px
+			width: 2px
+			background-color: $green_main
+			
+		.close:before 
+			transform: rotate(45deg)
+		
+		.close:after 
+			transform: rotate(-45deg)
+
 .ai_items
-	
 	font-size: 0px		
 	.ai_item
 		width: 100%
@@ -549,38 +590,50 @@ $gray: #767676
 		display: flex
 		padding: 20px 0px
 		justify-content: space-between
-		align-items: center	
-	.ai_item_img, .ai_item_text
-		width: calc(50% - 15px)
-	.ai_item_img 
-		margin-right: 15px
-		display: flex
-		align-items: center	
-		justify-content: center
-		padding: 15px
-		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
-		img
-			width: 100%
-	.ai_item_text
-		margin-left: 15px	
-		.main_text_content
-			p
-				margin-bottom: 0
-			li
-				list-style-type: none
-			li::before
-				content: ''
+		align-items: center
+		.ai_item_img, .ai_item_text
+			width: calc(50% - 15px)
+		.ai_item_img 
+			margin-right: 15px
+			display: flex
+			align-items: center	
+			justify-content: center
+			padding: 15px
+			box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+			img
+				width: 100%
+			img[src*="ffp"]
+				width: 50%
+		.ai_item_text
+			margin-left: 15px	
+			.main_text_content
+				p
+					margin-bottom: 0
+				li
+					list-style-type: none
+				li::before
+					content: ''
+					background-color: $green_main
+					width: 4px	
+					height: 4px	
+					border-radius: 2px
+					display: inline-block
+					vertical-align: middle
+					margin-right: 10px	
+			.ai_item_button
+				width: 170px
+				height: 50px
 				background-color: $green_main
-				width: 4px	
-				height: 4px	
-				border-radius: 2px
-				display: inline-block
-				vertical-align: middle
-				margin-right: 10px	
-
-		
-	img[src*="ffp"]
-		width: 50%
+				transition: .3s
+				margin-top: 30px
+				cursor: pointer
+				p
+					color: #fff
+					font-size: 18px
+					line-height: 50px
+					text-align: center
+		.ai_item_button:hover
+			transform: scale(1.2)
 	.ai_item:nth-child(even)
 		.ai_item_img
 			order: 2
