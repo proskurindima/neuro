@@ -1,5 +1,4 @@
-$(document).ready(function(){
-	$('.ipad_items').slick({
+$('.ipad_items').slick({
   		slidesToShow: 1,
   		slidesToScroll: 1,
   		arrows: false,
@@ -14,4 +13,3 @@ $(document).ready(function(){
  		prevArrow: $('.prev'),
   		nextArrow: $('.next'),
 	});
-});

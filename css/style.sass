@@ -57,7 +57,7 @@ $gray: #767676
 				margin: 10px 0 0 20px
 			.checkbox_text 
 				position: relative
-				padding: 0 0 0 60px
+				padding: 0 0 0 40px
 				cursor: pointer
 				font-size: 16px
 				color: $black
@@ -522,44 +522,71 @@ $gray: #767676
 
 .ai_head
 	position: relative
+	font-size: 0
 	.ai_head_bcg 
 		width: 100%
 	.main_title, .ai_head_text
 		position: absolute
-		padding-left: 40px	
+		padding-left: 4.3%
 	.main_title
-		top: 0px
+		top: 30%
 		left: 0px
+		font-size: 24px
+		font-weight: bold
 	.ai_head_text
-		top: 40%
+		top: 45%
 		width: 40%
+		font-size: 18px
+.ai_info
+	padding: 50px 4.3% 
+	border-bottom: 2px solid $green_main
 .ai_items
-	padding: 70px 15%
+	
+	font-size: 0px		
 	.ai_item
 		width: 100%
 		font-size: 0px
 		display: flex
 		padding: 20px 0px
-		justify-content: space-around
+		justify-content: space-between
+		align-items: center	
 	.ai_item_img, .ai_item_text
-		width: 50%
-		padding: 0px 20px
-	.ai_item_img img
-		width: 100%
+		width: calc(50% - 15px)
+	.ai_item_img 
+		margin-right: 15px
+		display: flex
+		align-items: center	
+		justify-content: center
+		padding: 15px
+		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+		img
+			width: 100%
 	.ai_item_text
-		font-size: 20px
-		.ai_item_text_title
-			color: $green_main
-			font-size: 25px
-			margin-bottom: 20px	
-		.ai_item_text_content
-			font-size: 18px	
-			font-weight: bold
-			color: #333
+		margin-left: 15px	
+		.main_text_content
+			p
+				margin-bottom: 0
+			li
+				list-style-type: none
+			li::before
+				content: ''
+				background-color: $green_main
+				width: 4px	
+				height: 4px	
+				border-radius: 2px
+				display: inline-block
+				vertical-align: middle
+				margin-right: 10px	
+
+		
 	img[src*="ffp"]
 		width: 50%
 	.ai_item:nth-child(even)
 		.ai_item_img
 			order: 2
+			margin-left: 15px	
+			margin-right: 0	
 		.ai_item_text
 			order: 1
+			margin-right: 15px
+			margin-left: 0	
