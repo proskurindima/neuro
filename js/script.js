@@ -13,7 +13,15 @@ $('.ipad_items').slick({
  		prevArrow: $('.prev'),
   		nextArrow: $('.next'),
 	});
-
+$('.web_items').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),
+  cssEase: 'linear'
+});
 //Функция Popup
     function show(state){
             document.getElementById('window').style.display = state;            
@@ -42,3 +50,20 @@ $(window).scroll(function(){
         $('.header_wrapper').removeClass('scroll')
     }
 });
+
+$('.accordion_item_header').on('click', function () {
+			var content = $(this).next()
+			var parent = $(this).parent()
+			if (parent.hasClass('active')) {
+				parent.removeClass('active')
+				content.stop().slideUp(400)
+			} else {
+				$('.web_info_accordion_item.active')
+					.removeClass('active')
+					.find('.accordion_item_content')
+					.stop()
+					.slideUp(400)
+				parent.addClass('active')
+				content.stop().slideDown(400)
+			}
+		});

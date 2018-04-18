@@ -5,6 +5,7 @@ $green_main: #00b449
 $black: #050505
 $gray: #767676
 $red: #d11b1b
+$lightgray: #eeeeee
 *
 	padding: 0
 	margin: 0
@@ -14,6 +15,25 @@ $red: #d11b1b
 .main_wrapper
 	overflow: hidden
 	width: 100%
+	.slick-dots 
+		button
+			display: none
+		li::before
+			content: ''
+			background-color: $green_main
+			width: 6px
+			height: 6px
+			border-radius: 3px
+			opacity: .5
+			transition: 0.4s
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px	
+		.slick-active:before
+			width: 8px
+			height: 8px
+			border-radius: 4px
+			opacity: 1
 	.main_text_title
 		display: inline-block
 		p
@@ -28,13 +48,25 @@ $red: #d11b1b
 		font-size: 16px
 		p
 			margin-bottom: 25px
+		li
+			list-style-type: none
+			font-size: 16px	
+		li::before
+			content: ''
+			background-color: $green_main
+			width: 4px	
+			height: 4px	
+			border-radius: 2px
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px	
 	.form_title
 		font-size: 21px
 		color: $green_main
 		font-weight: bold
 		line-height: 1.2
 		margin-bottom: 25px
-	.main_use_form, .feedback_form, .popup_form
+	.main_use_form, .feedback_form, .popup_form, .web_info_form
 		margin-left: 15px
 		background-color: #fff
 		position: relative
@@ -90,11 +122,20 @@ $red: #d11b1b
 	.next, .prev
 		position: absolute
 		display: block
+		z-index: 10
 		width: 20px
 		height: 20px
-		border-top: 4px solid #d0d0d0
-		border-right: 4px solid #d0d0d0
+		border-top: 4px solid $gray
+		border-right: 4px solid $gray
 		cursor: pointer
+		border-radius: 4px
+		transition: 0.3s
+	.next:hover, .prev:hover
+		border-color: $green_main
+	.next:hover
+		right: -5px
+	.prev:hover
+		left: -5px
 	.next 
 		transform: rotate(45deg)
 		right: 0
@@ -408,7 +449,6 @@ $red: #d11b1b
 		align-items: center
 		height: 100%
 		font-size: 16px
-
 .partner_head
 	margin-top: 200px
 	display: flex
@@ -512,19 +552,11 @@ $red: #d11b1b
 		width: 64.5%
 		img
 			width: 100%
-
-
-
-
-
-
-
-
-
 .ai_head
 	position: relative
 	font-size: 0
 	margin-bottom: 100px
+	min-height: 400px	
 	.ai_head_bcg 
 		width: 100%
 	.main_title, .ai_head_text
@@ -581,7 +613,6 @@ $red: #d11b1b
 		
 		.close:after 
 			transform: rotate(-45deg)
-
 .ai_items
 	font-size: 0px		
 	.ai_item
@@ -643,3 +674,141 @@ $red: #d11b1b
 			order: 1
 			margin-right: 15px
 			margin-left: 0	
+
+.web_head
+	min-height: 400px
+	background-color: $lightgray
+	position: relative
+	.web_head_bcg
+		position: relative
+		top: 0
+		left: 35.78%
+		width: 64.22%
+		img
+			width: 100%
+	.main_title, .web_head_text
+		padding: 0 4.3%
+		position: absolute
+	.main_title
+		font-size: 28px	
+		font-weight: bold
+		top: 25%
+		margin-left: 50px	
+		color: $green_main
+
+	.web_head_text
+		font-size: 18px
+		top: 40%
+		margin-left: 50px	
+		width: 55%
+.web_info
+	padding: 100px 4.3%
+	position: relative
+	z-index: 3
+	.main_circle_img
+			position: absolute
+			z-index: 2
+			right: 0
+			transform: translate(0, -41.15%)
+			width: 66.8%
+			img
+				width: 100%
+	.web_info_items
+		display: flex
+		align-items: center	
+		justify-content: space-between	
+		.web_info_text, .web_info_accordion
+			width: 	calc(50% - 15px)
+		.web_info_text
+			margin-right: 15px
+		.web_info_accordion
+			margin-left: 15px
+			background-color: #fff
+			.web_info_accordion_item
+				overflow: hidden
+				position: relative
+				z-index: 3
+				background-color: #fff
+				margin: 10px
+				box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+				.accordion_item_header
+					display: flex
+					align-items: center
+					cursor: pointer
+					justify-content: space-between
+					height: 50px
+					position: relative
+					border: 1px solid $lightgray
+					transition: .3s
+					p
+						display: inline-block
+						margin-left: 25px
+						transition: .2s
+						font-size: 17px
+						font-weight: bold
+				.accordion_item_header:hover
+					height: 60px
+					background-color: $lightgray
+					p
+						color: $green_main
+				.accordion_item_header::after 
+						content: ''
+						position: absolute
+						display: inline-block
+						width: 12px
+						height: 12px
+						border-top: 4px solid $green_main
+						border-right: 4px solid $green_main
+						transform-origin: 50% 7px
+						transform: rotate(-45deg)
+						transition: transform .2s ease-in
+						right: 20px
+						border-radius: 4px
+				.accordion_item_content
+					display: none
+					padding: 25px
+					font-size: 16px
+			.web_info_accordion_item.active .accordion_item_header::after
+				transform: rotate(135deg)
+.web_sites
+	position: relative
+	margin: 0 4.3%
+.web_items
+	width: 100%
+	position: relative
+	z-index: 3
+	padding-bottom: 20px
+	.web_item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.web_item_img, .web_item_text
+			width: calc(50% - 15px - 6%)
+		.web_item_img
+			margin: 10px 15px 10px 6%
+			box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+			img
+				width: 100%
+		.web_item_text
+			margin: 0 6% 0 15px
+			li
+				list-style-type: none
+				span
+					font-weight: bold
+					font-size: 18px
+				li
+					margin-left: 30px
+			li::before
+				content: ''
+				background-color: $green_main
+				width: 4px	
+				height: 4px	
+				border-radius: 2px
+				display: inline-block
+				vertical-align: middle
+				margin-right: 10px	
+				span
+					font-weight: bold
+					font-size: 18px
+				li
+					margin-left: 30px
