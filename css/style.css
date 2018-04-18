@@ -928,13 +928,16 @@
           transition: .3s; }
           .web_info .web_info_items .web_info_accordion .web_info_accordion_item .accordion_item_header p {
             display: inline-block;
-            margin-left: 25px;
+            margin-left: 30px;
             -webkit-transition: .2s;
             -o-transition: .2s;
             transition: .2s;
             font-size: 17px;
             font-weight: bold; }
         .web_info .web_info_items .web_info_accordion .web_info_accordion_item .accordion_item_header:hover {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1);
           background-color: #eeeeee; }
           .web_info .web_info_items .web_info_accordion .web_info_accordion_item .accordion_item_header:hover p {
             color: #00b449; }
@@ -957,7 +960,7 @@
           -o-transition: transform .2s ease-in;
           transition: transform .2s ease-in;
           transition: transform .2s ease-in, -webkit-transform .2s ease-in;
-          right: 20px;
+          right: 30px;
           border-radius: 4px; }
         .web_info .web_info_items .web_info_accordion .web_info_accordion_item .accordion_item_content {
           display: none;
