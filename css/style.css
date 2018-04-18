@@ -935,7 +935,6 @@
             font-size: 17px;
             font-weight: bold; }
         .web_info .web_info_items .web_info_accordion .web_info_accordion_item .accordion_item_header:hover {
-          height: 60px;
           background-color: #eeeeee; }
           .web_info .web_info_items .web_info_accordion .web_info_accordion_item .accordion_item_header:hover p {
             color: #00b449; }
