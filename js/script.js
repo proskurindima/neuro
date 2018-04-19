@@ -69,7 +69,9 @@ $('.accordion_item_header').on('click', function () {
 		});
 
 
-$(".ai_item:odd .ai_item_img").addClass("scrollflow -slide-left");
-$(".ai_item:odd .ai_item_text").addClass("scrollflow -slide-right");
-$(".ai_item:even .ai_item_img").addClass("scrollflow -slide-right");
-$(".ai_item:even .ai_item_text").addClass("scrollflow -slide-left");
+$(".ai_item:odd .ai_item_img").addClass("scrollflow -slide-left -opacity");
+$(".ai_item:odd .ai_item_text").addClass("scrollflow -slide-right -opacity");
+$(".ai_item:even .ai_item_img").addClass("scrollflow -slide-right -opacity");
+$(".ai_item:even .ai_item_text").addClass("scrollflow -slide-left -opacity");
+$(".web_item .web_item_img").addClass("scrollflow -slide-right -opacity");
+$(".web_item .web_item_text").addClass("scrollflow -slide-left -opacity");
