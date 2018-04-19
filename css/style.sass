@@ -172,11 +172,21 @@ $lightgray: #eeeeee
 		align-items: center
 		background-color: #fff
 		transition: .4s
+		position: relative
 		.logo
 			display: flex
 			align-items: center
+		.main_nav.active
+			position: absolute
+			width: 100px
+			bottom: 0px
+			right: 0
 		.main_nav
+			display: flex
+			justify-content: flex-end
+			align-items: center
 			ul
+				display: inline-block
 				li
 					list-style-type: none
 					display: inline-block
@@ -211,6 +221,39 @@ $lightgray: #eeeeee
 						0% { padding-top: 0px}
 						0% { padding-bottom: 0px}
 						100% { height: 150px}
+			#nav_toggle
+				position: relative
+				display: inline-block
+				height: 25px
+				width: 35px	
+				display: none
+				span
+					position: absolute
+					left: 0px
+					top: 10px
+				span, span:before, span:after
+					transition: all 500ms ease-in-out
+					cursor: pointer
+					border-radius: 5px
+					height: 5px
+					width: 35px
+					background-color: $green_main
+					position: absolute
+					display: block
+					content: ''
+				span:before
+					top: -10px
+				span:after
+					top: 10px
+			#nav_toggle.active
+				span
+					background-color: transparent
+				span:before, span:after
+					top: 0
+				span:before
+					transform: rotate(45deg)
+				span:after
+					transform: rotate(-45deg)
 .scroll
 	padding-top: 0
 	.header
@@ -714,7 +757,6 @@ $lightgray: #eeeeee
 			order: 1
 			margin-right: 15px
 			margin-left: 0	
-
 .web_head
 	min-height: 400px
 	background-color: $lightgray
@@ -817,7 +859,6 @@ $lightgray: #eeeeee
 	z-index: 3
 	background-color: #fff
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
-
 .web_items
 	width: 100%
 	position: relative
@@ -865,7 +906,6 @@ $lightgray: #eeeeee
 	position: relative
 	z-index: 3
 	border-bottom: 2px solid $green_main
-
 .crypto_info
 	height: 500px
 	border-bottom: 2px solid $green_main

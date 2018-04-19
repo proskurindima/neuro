@@ -75,3 +75,14 @@ $(".ai_item:even .ai_item_img").addClass("scrollflow -slide-right -opacity");
 $(".ai_item:even .ai_item_text").addClass("scrollflow -slide-left -opacity");
 $(".web_item .web_item_img").addClass("scrollflow -slide-right -opacity");
 $(".web_item .web_item_text").addClass("scrollflow -slide-left -opacity");
+
+
+
+$(document).ready(function(){
+    $('#nav_toggle').click(function(){
+        $(this).toggleClass('active');
+    });
+});
+$('#nav_toggle').on('click', function() {
+			$('.main_nav').toggleClass('active')
+		});
