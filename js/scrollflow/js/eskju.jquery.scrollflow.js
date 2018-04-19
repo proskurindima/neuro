@@ -134,12 +134,12 @@
 				
 				if( $( obj ).hasClass( "-slide-left" ) )
 				{
-					options.translateX = ( -100 + factor * 100 ) * -1;
+					options.translateX = ( -200 + factor * 200 ) * -1;
 				}
 				
 				if( $( obj ).hasClass( "-slide-right" ) )
 				{
-					options.translateX = ( -100 + factor * 100 );
+					options.translateX = ( -200 + factor * 200 );
 				}
 				
 				if( $( obj ).hasClass( "-slide-top" ) )
