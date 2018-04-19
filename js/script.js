@@ -67,3 +67,9 @@ $('.accordion_item_header').on('click', function () {
 				content.stop().slideDown(400)
 			}
 		});
+
+
+$(".ai_item:odd .ai_item_img").addClass("scrollflow -slide-left");
+$(".ai_item:odd .ai_item_text").addClass("scrollflow -slide-right");
+$(".ai_item:even .ai_item_img").addClass("scrollflow -slide-right");
+$(".ai_item:even .ai_item_text").addClass("scrollflow -slide-left");
