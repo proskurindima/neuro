@@ -86,3 +86,15 @@ $(document).ready(function(){
 $('#nav_toggle').on('click', function() {
 			$('.main_nav').toggleClass('active')
 		});
+
+$(document).ready(function() {
+	var windowWidth = $(window).width();
+    if(windowWidth < 769) {
+       $('.main_service_item:eq(1)').removeClass('-pop');
+       $('.main_service_item:eq(1)').addClass('-slide-left');
+       $('.main_service_item:eq(2)').removeClass('-slide-left');
+       $('.main_service_item:eq(2)').addClass('-pop');
+
+       console.log('hi');
+    }
+});

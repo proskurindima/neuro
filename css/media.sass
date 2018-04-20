@@ -1,0 +1,192 @@
+$green_main: #00b449
+$black: #050505
+$gray: #767676
+$red: #d11b1b
+$lightgray: #eeeeee
+//HOVER OFF//
+@media all and (max-width: 1024px) 
+	.main_wrapper
+		.next:hover, .prev:hover
+			border-color: $gray
+		.next:hover
+			right: 0
+		.prev:hover
+			left: 0
+		.header_wrapper
+			.header
+				.main_nav
+					ul
+						li
+							a:hover 
+								color: $black	
+						li:hover
+		.main_head
+			.main_head_ckroll
+				margin-top: 100px
+		.main_service
+			.main_service_items
+				.main_service_item
+					.main_service_item_gradient
+						display: none
+				.main_service_item:hover
+					top: 0
+					left: 0
+					.main_service_item_title
+						opacity: 1
+		.main_partner
+			.partner_items
+				.partner_item
+					img[src*="hover"]
+						display: none
+		.partner_info
+			.partner_info_left
+				.partner_logo_items
+					.partner_logo_item
+						img[src*="hover"]
+							display: none
+		.ai_items
+			.ai_item
+				.ai_item_button:hover
+					transform: scale(1)
+		.web_info
+			.web_info_items
+				.web_info_accordion
+					.web_info_accordion_item
+						.accordion_item_header:hover 
+							transform: scale(1)
+							background: #fff
+							p
+								color: $black
+		.partner_head
+			margin-top: 150px
+		.partner_info
+			.main_circle_img
+				transform: translate(0, -41.15%)
+				width: 76%
+
+@media all and (max-width: 768px)
+	.main_wrapper
+		.next
+			margin-right: 10px
+		.prev
+			margin-left: 10px
+		.form_title
+			font-size: 19.5px
+			margin-bottom: 20px
+		.main_use_form, .feedback_form, .popup_form, .web_info_form
+			padding: 30px 30px
+			.forma_group
+				margin-bottom: 20px
+			.checkbox
+				input
+					position: absolute
+					z-index: -1
+					opacity: 0
+					margin: 10px 0 0 20px
+				.checkbox_text 
+					position: relative
+					padding: 0 0 0 30px
+					cursor: pointer
+					font-size: 16px
+					color: $black
+				.checkbox_text:before 
+					content: ''
+					position: absolute
+					left: 0
+					width: 20px
+					height: 20px
+					box-shadow: inset 0px 1px 3px 0px rgba(13, 13, 13, 0.5)
+					transition: background-color .2s ease-in-out
+					background-color: #fff
+			button
+				margin-top: 25px
+		.main_text_title
+			p
+				font-size: 22px
+			.main_line
+				margin: 10px 0px 20px 0px
+		.main_text_content
+			font-size: 15px
+			p
+				margin-bottom: 15px
+		.main_head
+			.main_head_img
+				left: 28%
+				width: 72%
+			.main_head_text	
+				.main_head_title
+					font-size: 40px
+				.main_head_subtitle
+					font-size: 20px
+			.main_head_ckroll
+				margin-top: 140px
+				.main_head_ckroll_text
+					font-size: 15px
+		.main_about
+			padding-bottom: 50px
+		.main_service
+			padding: 70px 4.3% 70px 4.3%
+			.main_service_items
+				flex-wrap: wrap
+				justify-content: center
+				.main_service_item
+					width: calc(50% - 30px)
+					margin: 20px 15px
+		.main_partner
+			padding-bottom: 100px
+			.partner_items
+				.partner_item
+					width: 33%
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-top: 30px
+		.main_feedback
+			padding-bottom: 70px
+			.feedback_map
+				width: 60%
+			.feedback_text
+				width: 40%
+				.feedback_form
+					padding: 0 
+		.main_footer
+			padding: 0 4.3%
+			height: 70px
+		.partner_head
+			margin-top: 120px
+		.partner_info
+			padding: 50px 4.3%
+			.main_circle_img
+				transform: translate(0, -41.15%)
+				width: 90%
+			.partner_info_left
+				.partner_logo_items
+					.partner_logo_item
+						width: 50%
+						margin-bottom: 30px
+		.web_head
+			padding-top: 50px
+			.web_head_bcg
+				left: 25%
+				width: 75%
+			.main_title
+				margin-left: 30px
+				font-size: 26px
+			.web_head_text
+				width: 65%
+				font-size: 17px
+				margin-left: 30px
+		.web_info
+			padding: 50px 4.3%
+			.main_circle_img
+				width: 95%
+		.web_info_items
+			.web_info_accordion
+				.web_info_accordion_item
+					.accordion_item_header
+					.accordion_item_content
+						padding: 10px 15px
+
+
+
+
