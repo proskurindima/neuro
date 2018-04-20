@@ -94,7 +94,5 @@ $(document).ready(function() {
        $('.main_service_item:eq(1)').addClass('-slide-left');
        $('.main_service_item:eq(2)').removeClass('-slide-left');
        $('.main_service_item:eq(2)').addClass('-pop');
-
-       console.log('hi');
     }
 });
