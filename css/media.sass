@@ -6,6 +6,9 @@ $lightgray: #eeeeee
 //HOVER OFF//
 @media all and (max-width: 1024px) 
 	.main_wrapper
+		.main_text_title	
+			.main_line
+				margin: 10px 0px 20px 0px
 		.next:hover, .prev:hover
 			border-color: $gray
 		.next:hover
@@ -103,8 +106,9 @@ $lightgray: #eeeeee
 		.main_text_title
 			p
 				font-size: 22px
+				line-height: 1.2	
 			.main_line
-				margin: 10px 0px 20px 0px
+				margin: 5px 0px 10px 0px
 		.main_text_content
 			font-size: 15px
 			p
@@ -121,7 +125,9 @@ $lightgray: #eeeeee
 			.main_head_ckroll
 				margin-top: 140px
 				.main_head_ckroll_text
-					font-size: 15px
+					font-size: 14px
+				.main_head_ckroll_line
+					width: 35px
 		.main_about
 			padding-bottom: 50px
 		.main_service
@@ -186,7 +192,229 @@ $lightgray: #eeeeee
 					.accordion_item_header
 					.accordion_item_content
 						padding: 10px 15px
+		.web_items
+			.web_item_text
+				li
+					span
+						font-size: 16px
+				li::before
+					span
+						font-size: 16px
+		.ai_head
+			.ai_head_text
+				font-size: 17px	
+				width: 45%
+				top: 40%
+		.main_with
+			padding: 50px 4.3%
+			.main_with_items
+				justify-content: space-around	
+			.main_with_item
+				width: 45%
+				text-align: center
+				margin-bottom: 30px
+				img
+					width: 80%
+		.ai_items
+			.ai_item
+				padding: 15px 0
+			.ai_item_img
+				padding: 0
+			.ai_item_text
+				.main_text_content
+					li 
+						font-size: 15px	
+				.ai_item_button
+					width: 140px
+					height: 40px
+					margin-top: 10px	
+					p
+						font-size: 16px	
+						line-height: 40px	
 
+@media all and (max-width: 760px)
+	.main_wrapper
+		.header_wrapper
+			.header
+				padding: 0px 40px
+				.main_nav
+					background-color: #fff
+					ul
+						display: none
+						.subnav
+							display: block	
+							position: relative
+							box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0)
+							padding: 0
+							height: auto
+							animation: subnav_opacity 0s
+							ul
+								box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0)
+								padding: 0
+								position: relative
+								top: 0
 
+								li
+									display: block	
+								li:last-child
+									margin-bottom: 0	
+					#nav_toggle
+						display: block
+				.main_nav.active
+					background-color: #fff
+					ul
+						display: block	
+						position: absolute
+						background-color: #fff
+						top: 40px
+						right: 0
+						box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+						padding: 25px
+						li
+							padding: 0
+							margin-bottom: 10px
+@media all and (max-width: 420px)
 
+	.main_wrapper
+		.form_title
+			font-size: 18px
+			margin-bottom: 15px
+		.main_use_form, .feedback_form, .popup_form, .web_info_form
+			padding: 25px 25px
+			margin-right: 0
+			margin-left: 0
+			.forma_group
+				margin-bottom: 20px
+				input::placeholder
+					font-size: 16px	
+			.checkbox
+				input
+					position: absolute
+					z-index: -1
+					opacity: 0
+					margin: 10px 0 0 20px
+				.checkbox_text 
+					position: relative
+					padding: 0 0 0 30px
+					cursor: pointer
+					font-size: 16px
+					color: $black
+				.checkbox_text:before 
+					content: ''
+					position: absolute
+					left: 0
+					width: 20px
+					height: 20px
+					box-shadow: inset 0px 1px 3px 0px rgba(13, 13, 13, 0.5)
+					transition: background-color .2s ease-in-out
+					background-color: #fff
+			button
+				margin-top: 15px
+				font-size: 0	
+				height: 40px	
+				width: 100px	
+				margin-right: auto
+				margin-left: auto
+				display: block	
 
+		.main_text_title
+			text-align: center	
+			p
+				font-size: 21px
+				line-height: 1.2
+			.main_line
+				margin: 3px auto 8px auto
+		.main_text_content
+			font-size: 15px
+			text-align: left
+			p
+				margin-bottom: 15px
+		.header_wrapper
+			font-size: 0
+			border: 0px
+			position: fixed
+			top: 0
+			padding: 0
+			.header
+				height: 75px
+				.main_nav.active
+					a
+						font-size: 18px	
+		.main_head
+			margin-top: 75px
+			overflow: hidden
+			.main_head_img
+				width: calc(100% - 5%)
+				margin: 0px 2.5%
+				left: 0	
+			.main_head_text
+				.main_head_title
+					font-size: 24px	
+					font-weight: bold	
+				.main_head_subtitle
+					position: relative
+					top: 50px	
+					font-size: 18px	
+			.main_head_ckroll
+				display: none
+		.main_about
+			padding-bottom: 35px	
+			.main_circle_img
+				width: 100%	
+			.main_about_items
+				.main_about_img
+					display: none	
+				.main_about_text
+					width: 100%	
+					padding: 0
+					text-align: center	
+				.main_text_content
+					text-align: left
+		.main_use
+			flex-wrap: wrap
+			.main_use_text, .main_use_form
+				width: 100%
+			.main_use_text
+				text-align: center
+		.main_service
+			padding: 35px 4.3%
+			.main_service_items
+				flex-wrap: wrap
+				justify-content: center
+				.main_service_item
+					width: 80%
+					margin: 20px 15px
+					.main_service_item_title
+						font-size: 20px
+						padding: 15px
+		.main_partner
+			padding-bottom: 100px
+			text-align: center	
+			.partner_items
+				.partner_item
+					width: 50%
+					display: flex
+					align-items: center
+					justify-content: center
+					margin-top: 30px
+		.main_feedback
+			padding-bottom: 35px
+			flex-wrap: wrap
+			.feedback_text, .feedback_map
+				width: 100%
+				margin: 0px
+			.feedback_text
+				margin-bottom: 35px
+				input
+					background: transparent
+			.feedback_map
+				height: 350px
+			.feedback_bcg
+				width: 100%	
+				top: 0
+		.main_footer
+			padding: 0px 4.3%
+			.footer
+				font-size: 12px	
+				flex-wrap: wrap
+				align-content: center	

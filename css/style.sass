@@ -178,9 +178,12 @@ $lightgray: #eeeeee
 			align-items: center
 		.main_nav.active
 			position: absolute
-			width: 100px
-			bottom: 0px
-			right: 0
+			right: 40px
+			display: block
+			ul
+				display: block
+				li
+					display: inline-block	
 		.main_nav
 			display: flex
 			justify-content: flex-end
@@ -223,7 +226,6 @@ $lightgray: #eeeeee
 						100% { height: 150px}
 			#nav_toggle
 				position: relative
-				display: inline-block
 				height: 25px
 				width: 35px	
 				display: none
@@ -241,6 +243,8 @@ $lightgray: #eeeeee
 					position: absolute
 					display: block
 					content: ''
+					transition: all .3s
+					transform: rotate(0deg)
 				span:before
 					top: -10px
 				span:after
@@ -248,6 +252,7 @@ $lightgray: #eeeeee
 			#nav_toggle.active
 				span
 					background-color: transparent
+					transition: all .3s
 				span:before, span:after
 					top: 0
 				span:before
@@ -480,6 +485,7 @@ $lightgray: #eeeeee
 	border-bottom: 2px solid $green_main
 	.feedback_text, .feedback_map
 		width: calc(50% - 15px)
+		text-align: center	
 	.feedback_text
 		margin-right: 15px
 		padding: 20px 0px
@@ -490,7 +496,7 @@ $lightgray: #eeeeee
 			padding: 0px 29.82% 0px 0px
 			margin-left: 0	
 			background-color: transparent
-			input
+			inputp
 				background-color: transparent
 	.feedback_map
 		margin-left: 15px	
@@ -758,6 +764,7 @@ $lightgray: #eeeeee
 	min-height: 400px
 	background-color: $lightgray
 	position: relative
+	z-index: 2
 	.web_head_bcg
 		position: relative
 		top: 0
@@ -865,6 +872,12 @@ $lightgray: #eeeeee
 	position: relative
 	z-index: 3
 	padding-bottom: 20px
+	display: flex
+	align-items: center
+	.slick-list
+		.slick-track
+			display: flex
+			align-items: center
 	.web_item
 		display: flex
 		align-items: center

@@ -95,4 +95,10 @@ $(document).ready(function() {
        $('.main_service_item:eq(2)').removeClass('-slide-left');
        $('.main_service_item:eq(2)').addClass('-pop');
     }
+    if (windowWidth < 440) {
+      $('.feedback_text').removeClass('-slide-left');
+      $('.feedback_text').addClass('-pop');
+      $('.feedback_map').removeClass('-slide-right');
+      $('.feedback_map').addClass('-pop');
+    }
 });
