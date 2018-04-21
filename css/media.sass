@@ -192,6 +192,8 @@ $lightgray: #eeeeee
 					.accordion_item_header
 					.accordion_item_content
 						padding: 10px 15px
+		.web_sites
+			margin-bottom: 60px
 		.web_items
 			.web_item_text
 				li
@@ -200,6 +202,8 @@ $lightgray: #eeeeee
 				li::before
 					span
 						font-size: 16px
+		.web_feedback
+			padding-bottom: 60px
 		.ai_head
 			.ai_head_text
 				font-size: 17px	
@@ -231,7 +235,11 @@ $lightgray: #eeeeee
 					p
 						font-size: 16px	
 						line-height: 40px	
-
+		.ai_info
+			.popup_form
+				.close
+					top: 3px
+					right: 3px
 @media all and (max-width: 760px)
 	.main_wrapper
 		.header_wrapper
@@ -417,4 +425,289 @@ $lightgray: #eeeeee
 			.footer
 				font-size: 12px	
 				flex-wrap: wrap
-				align-content: center	
+				align-content: center
+		.partner_head
+			flex-wrap: wrap
+			.partner_head_left, .partner_head_right
+				width: 100%
+				margin-right: 0
+				margin-left: 0
+			.main_text_title
+				.main_line
+					margin-right: 0
+					margin-left: 0	
+			.partner_head_left
+				margin-bottom: 20px	
+		.partner_info
+			flex-wrap: wrap
+			.partner_info_left, .partner_info_right
+				width: 100%	
+				margin-right: 0	
+				margin-left: 0	
+		.ai_head
+			margin-top: 75px
+			min-height: 0
+			margin-bottom: 35px	
+			.ai_head_bcg
+				opacity: .8
+			.main_title, .ai_head_text
+				padding: 0px 4.3%
+			.main_title
+				top: 5%
+				font-size: 22px	
+			.ai_head_text
+				font-size: 16px
+				top: 17%
+				width: 100%	
+		.main_with
+			padding-bottom: 10px
+			.main_with_items
+				.main_with_item
+					width: 48%	
+					.main_with_img
+						width: 65%
+						img
+
+					.main_with_title
+						font-size: 20px	
+						margin: 10px 0px
+				.main_with_item:last-child
+					.main_with_img
+						img
+							width: 91%
+		.ai_info
+			padding-bottom: 35px
+			.popup_form
+				width: 90%	
+			.ai_item
+				flex-wrap: wrap
+				justify-content: center
+				.ai_item_img, .ai_item_text
+					width: 100%
+					margin-right: 0
+					margin-left: 0
+				.ai_item_img
+					order: 2
+					width: 75%
+
+				.ai_item_text
+					order: 1
+					text-align: center
+					margin-bottom: 25px
+					.ai_item_button
+						margin-right: auto
+						margin-left: auto
+		.web_head
+			margin-top: 75px
+			padding: 0
+			min-height: 0
+			width: 100%
+			.web_head_bcg
+				width: 100%
+				left: 0
+				opacity: .8
+			.main_title, .web_head_text
+				margin-left: 0
+				padding: 0 4.3%
+			.main_title
+				font-size: 20px
+				top: 5%
+			.web_head_text
+				font-size: 16px
+				top: 17%
+				width: 100%
+		.web_info
+			.web_info_items
+				flex-wrap: wrap
+				justify-content: center
+				.web_info_text, .web_info_accordion
+					width: 	100%
+					margin-right: 0
+					margin-left: 0
+				.web_info_text
+					margin-bottom: 24px
+		.web_sites
+			margin-bottom: 35px
+			.next, .prev
+					top: 25%
+			.web_items
+				justify-content: center
+				flex-wrap: wrap
+				.web_item
+					justify-content: center
+					flex-wrap: wrap
+					.web_item_img, .web_item_text
+						width: calc(100% - 6%)
+						margin-right: 0
+						margin-left: 0
+					.web_item_img
+						width: 75%
+						margin-bottom: 15px
+					.web_item_text
+						line-height: 1.2
+		.web_feedback
+			padding-bottom: 35px
+		.main_footer
+			.footer
+				.footer_item
+					font-size: 10px
+@media all and (max-width: 375px)
+	.main_wrapper
+		.form_title
+			font-size: 17px
+			margin-bottom: 15px
+		.main_use_form, .feedback_form, .popup_form, .web_info_form
+			padding: 20px 20px
+			.forma_group
+				margin-bottom: 15px
+				input::placeholder
+					font-size: 14px	
+			.checkbox
+				input
+					margin: 8px 0 0 16px
+				.checkbox_text 
+					padding: 0 0 0 25px
+					font-size: 14px
+			button
+				margin-top: 12px
+		.main_text_title
+			p
+				font-size: 20px
+		.main_text_content
+			font-size: 15px
+		.header_wrapper
+			.header
+				font-size: 0	
+				padding: 0 20px
+				.main_nav.active
+					right: 20px
+					ul
+						padding: 15px
+						overflow: hidden
+					>ul
+						
+
+
+		.main_service
+			.main_service_items
+				.main_service_item
+					.main_service_item_title
+						font-size: 19px
+		.web_head
+			.web_head_text
+				font-size: 15px
+		.main_with
+			.main_with_items
+				.main_with_item
+					.main_with_title
+						font-size: 18px
+					.main_with_text
+						font-size: 14px
+@media all and (max-width: 320px)
+	.main_wrapper
+		.form_title
+			font-size: 15.5px
+			margin-bottom: 15px
+		.main_use_form, .feedback_form, .popup_form, .web_info_form
+			padding: 10px
+			.forma_group
+				margin-bottom: 10px
+				input::placeholder
+					font-size: 14.5px	
+			.checkbox
+				input
+					margin: 5px 0 0 10px
+				.checkbox_text 
+					padding: 0 0 0 25px
+			button
+				margin-top: 12px
+		.main_text_title
+			p
+				font-size: 18px
+		.main_text_content
+			font-size: 14px
+		.header_wrapper
+			.header
+				height: 60px
+				.main_nav.active
+					right: 20px
+					ul
+						padding: 10px
+						overflow: hidden
+					>ul
+						right: -15px
+						width: 310px
+		.main_head
+			margin-top: 60px
+			.main_head_text
+				.main_head_title
+					font-size: 22px
+				.main_head_subtitle
+					top: 30px
+		.main_service
+			.main_service_items
+				.main_service_item
+					.main_service_item_title
+						font-size: 16px
+					.main_service_item_more
+						font-size: 14px
+		.main_partner
+			padding-bottom: 50px
+			.partner_more
+					a
+						font-size: 14px
+			.partner_items
+				justify-content: space-between
+				.partner_item
+					width: auto
+					margin-top: 20px
+		.main_service
+			.main_service_items
+				.main_service_item
+					margin-top: 0
+		.main_feedback
+			.feedback_text
+				margin-bottom: 15px
+		.partner_head
+			margin-top: 100px
+		.partner_info
+			padding-bottom: 35px
+			padding-top: 35px
+			.partner_info_left
+				.partner_logo_items
+					.partner_logo_item
+						width: auto
+		.web_head
+			margin-top: 60px
+			.main_title
+				top: 3%
+				font-size: 18px
+			.web_head_text
+				font-size: 12.5px
+				top: 15%
+		.web_info
+			padding-top: 25px
+			padding-bottom: 25px
+			li
+				font-size: 14px
+		.ai_head
+			margin-top: 60px
+			.main_title
+				top: 3%
+				font-size: 18px
+			.ai_head_text
+				font-size: 13px
+		.main_with
+			padding-top: 30px
+			.main_with_items
+				.main_with_item
+					width: 100%
+					.main_with_img
+						width: 40%
+		.ai_info
+			.ai_items
+				.ai_item
+					.main_text_content
+						li
+							font-size: 14px
+

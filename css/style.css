@@ -207,7 +207,9 @@
     .header_wrapper .header .main_nav.active {
       position: absolute;
       right: 40px;
-      display: block; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
       .header_wrapper .header .main_nav.active ul {
         display: block; }
         .header_wrapper .header .main_nav.active ul li {
@@ -542,7 +544,7 @@
         -o-transition: .4s;
         transition: .4s;
         opacity: 1;
-        ine-height: 1.2; }
+        line-height: 1.2; }
       .main_service .main_service_items .main_service_item .main_service_item_more {
         font-size: 16px;
         position: absolute;
