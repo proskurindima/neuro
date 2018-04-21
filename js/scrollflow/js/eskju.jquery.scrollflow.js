@@ -24,9 +24,9 @@
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-	$( document ).ready( function()
-	{
+	$( document ).ready( function(){
 		new ScrollFlow();
+
 	});
 
 	$.fn.ScrollFlow = function( options )
@@ -49,7 +49,7 @@
 				mobileTimeout: 100, // not supported yet
 				durationOnLoad: 0,
 				durationOnResize: 250,
-				durationOnScroll: 500
+				durationOnScroll: 400
 			}, options );
 			
 			this.lastScrollTop = 0;
@@ -98,8 +98,8 @@
 				// request object settings
 				effectDuration = $this.options.durationOnScroll;
 				effectDuration = typeof( forcedDuration ) != "undefined" ? forcedDuration : effectDuration;
-				effectiveFromPercentage = ( !isNaN( parseInt( $( obj ).attr( "data-scrollflow-start" ) / 100 ) ) ? parseInt( $( obj ).attr( "data-scrollflow-start" ) ) / 100 : -0.25 );
-				scrollDistancePercentage = ( !isNaN( parseInt( $( obj ).attr( "data-scrollflow-distance" ) / 100 ) ) ? parseInt( $( obj ).attr( "data-scrollflow-distance" ) ) / 100 : 0.5 );
+				effectiveFromPercentage = ( !isNaN( parseInt( $( obj ).attr( "data-scrollflow-start" ) / 100 ) ) ? parseInt( $( obj ).attr( "data-scrollflow-start" ) ) / 100 : -0.15 );
+				scrollDistancePercentage = ( !isNaN( parseInt( $( obj ).attr( "data-scrollflow-distance" ) / 100 ) ) ? parseInt( $( obj ).attr( "data-scrollflow-distance" ) ) / 100 : 0.35 );
 				effectiveFrom = objOffsetTop - winHeight * ( 1 - effectiveFromPercentage );
 				effectiveTo = objOffsetTop - winHeight * ( 1 - scrollDistancePercentage );
 				// end object settings
