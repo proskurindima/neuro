@@ -281,7 +281,20 @@ $lightgray: #eeeeee
 						li
 							padding: 0
 							margin-bottom: 10px
-@media all and (max-width: 420px)
+@media all and (max-width: 600px)
+	.main_wrapper
+		.main_feedback
+			padding-bottom: 35px
+			flex-wrap: wrap
+			.feedback_text, .feedback_map
+				width: 100%
+				margin: 0px
+			.feedback_map
+				height: 350px
+			.feedback_bcg
+				width: 100%	
+				top: 0
+@media all and (max-width: 620px)
 
 	.main_wrapper
 		.form_title
@@ -406,17 +419,19 @@ $lightgray: #eeeeee
 					justify-content: center
 					margin-top: 30px
 		.main_feedback
-			padding-bottom: 35px
-			flex-wrap: wrap
-			.feedback_text, .feedback_map
-				width: 100%
-				margin: 0px
 			.feedback_text
 				margin-bottom: 35px
+				.main_text_title
+					.main_line
+						margin-right: 0
+						margin-left: 0
 				input
 					background: transparent
 			.feedback_map
 				height: 350px
+				.feedback_map_info
+					padding: 10px
+					font-size: 15px
 			.feedback_bcg
 				width: 100%	
 				top: 0
@@ -449,7 +464,7 @@ $lightgray: #eeeeee
 			min-height: 0
 			margin-bottom: 35px	
 			.ai_head_bcg
-				opacity: .8
+				opacity: .6
 			.main_title, .ai_head_text
 				padding: 0px 4.3%
 			.main_title
@@ -487,8 +502,7 @@ $lightgray: #eeeeee
 					margin-right: 0
 					margin-left: 0
 				.ai_item_img
-					order: 2
-					width: 75%
+					display: none
 
 				.ai_item_text
 					order: 1
@@ -529,13 +543,18 @@ $lightgray: #eeeeee
 		.web_sites
 			margin-bottom: 35px
 			.next, .prev
-					top: 25%
+				top: 25%
+				padding: 10px
 			.web_items
 				justify-content: center
 				flex-wrap: wrap
+				align-items: flex-start
+				align-content: flex-start
 				.web_item
 					justify-content: center
 					flex-wrap: wrap
+					align-items: flex-start
+					align-content: flex-start
 					.web_item_img, .web_item_text
 						width: calc(100% - 6%)
 						margin-right: 0

@@ -1062,12 +1062,11 @@
             font-size: 17px;
             font-weight: bold; }
         .web_info .web_info_items .web_info_accordion .web_info_accordion_item .accordion_item_header:hover {
-          -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-          transform: scale(1.1);
           background-color: #eeeeee; }
           .web_info .web_info_items .web_info_accordion .web_info_accordion_item .accordion_item_header:hover p {
-            color: #00b449; }
+            color: #00b449;
+            margin-left: 15px;
+            font-size: 19px; }
         .web_info .web_info_items .web_info_accordion .web_info_accordion_item .accordion_item_header::after {
           content: '';
           position: absolute;
