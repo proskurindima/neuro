@@ -8,12 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link type="text/css" media="screen" rel="stylesheet" href="css/media.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<link href="img/favicon.png" rel="shortcut icon" type="image/x-icon" />
 	<meta name="description" content="Проводим анализ бизнес-процессов и устраняем слабые места в различных сферах бизнеса. Наша специализация - машинное обучение и компьютерное зрение. Разработали модули распознавания предметов, лиц, жестов и иных параметров человека (пол, возраст, эмоции, стиль). Установили наши системы в торговых центрах, банках, кофейнях и сетях кинотеатров.">
 	<meta name="keywords" content="Clever Neural Technologies Анализ. Разработка. Внедрение. Вэб, веб, технологии, машинное обучение. Новости, статьи, Регтех. +7 (495) 764 34 19, Каширское шоссе, д.31, Москва, МИФИ.">
+	
 </head>
 <body>
-	<div class="main_wrapper">
+	<div class="main_wrapper" id="tabs">
 		<div class="header_wrapper">
 			<div class="header">
 				<a class="logo" href="/"><img  src="img/logo.png" alt=""></a>
@@ -37,7 +38,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="partner_head">
+		<div class="partner_head" >
 			<div class="partner_head_left">
 				<div class="prev"></div>
 				<div class="partner_head_ipad">
@@ -167,8 +168,8 @@
 						<div class="forma_group">
 							<input type="text" name="company_name" placeholder="Название компании" required >
 						</div>
-						<div class="forma_group" required >
-							<input type="email" name="email" placeholder="Ваш электронный адресс">
+						<div class="forma_group">
+							<input type="email" name="email" placeholder="Ваш электронный адресс" required>
 						</div>
 						<input type="hidden" name="_subject" value="Сообщение с страницы Партнёров Neurocore" />
 						<input type="hidden" name="_next" value="/" />
@@ -191,8 +192,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/slick/slick.min.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/slick/slick.min.js"></script>
 	<script src="js/scrollflow/js/eskju.jquery.scrollflow.js"></script>
 	<script src="js/script.js"></script>
 </body>

@@ -41,12 +41,6 @@ $lightgray: #eeeeee
 				.partner_item
 					img[src*="hover"]
 						display: none
-		.partner_info
-			.partner_info_left
-				.partner_logo_items
-					.partner_logo_item
-						img[src*="hover"]
-							display: none
 		.ai_items
 			.ai_item
 				.ai_item_button:hover
@@ -168,7 +162,7 @@ $lightgray: #eeeeee
 			.partner_info_left
 				.partner_logo_items
 					.partner_logo_item
-						width: 50%
+						width: 50% !important
 						margin-bottom: 30px
 		.web_head
 			padding-top: 50px
@@ -459,6 +453,16 @@ $lightgray: #eeeeee
 				width: 100%	
 				margin-right: 0	
 				margin-left: 0	
+			.partner_info_left
+				.partner_logo_items
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					.partner_logo_item
+						img[src*="hover"]
+							display: none
 		.ai_head
 			margin-top: 75px
 			min-height: 0
@@ -600,6 +604,7 @@ $lightgray: #eeeeee
 				padding: 0 20px
 				.main_nav.active
 					right: 20px
+					
 					ul
 						padding: 15px
 						overflow: hidden
@@ -695,7 +700,7 @@ $lightgray: #eeeeee
 			.partner_info_left
 				.partner_logo_items
 					.partner_logo_item
-						width: auto
+						width: auto !important
 		.web_head
 			margin-top: 60px
 			.main_title

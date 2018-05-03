@@ -498,7 +498,7 @@ $lightgray: #eeeeee
 			color: $green_main
 			text-decoration: none
 			font-size: 18px
-.main_feedback, .crypto_feedback
+.main_feedback
 	padding: 0px 4.3% 100px 4.3%
 	position: relative
 	display: flex
@@ -977,7 +977,7 @@ $lightgray: #eeeeee
 			font-size: 50px
 			line-height: 1.2
 			span
-				color: #80d6e3
+				color: $green_main
 		.crypto_head_subtitle
 			color: $gray
 			font-size: 21px
@@ -997,7 +997,6 @@ $lightgray: #eeeeee
 	justify-content: space-between
 	align-items: center
 	position: relative
-	text-align: center
 	.crypto_info_img, .crypto_info_text
 		width: calc(50% - 15px)
 	.crypto_info_img 
@@ -1013,10 +1012,6 @@ $lightgray: #eeeeee
 		img
 			width: 50%
 			transform: scale(2)
-	.crypto_info_text
-		.main_text_title
-			.main_line
-				background-color: #80d6e3
 	.main_circle_img
 		position: absolute
 		z-index: -1
@@ -1043,10 +1038,6 @@ $lightgray: #eeeeee
 		padding-top: 100px
 		.crypto_item_img
 			padding-right: 8.75%
-		.crypto_item_text
-			.main_text_title
-				.main_line
-					background-color: #80d6e3
 	.crypto_item:nth-child(even)
 		padding-right: 9.75%
 		padding-left: 27.75%
@@ -1060,53 +1051,3 @@ $lightgray: #eeeeee
 			.main_text_title
 				.main_line
 					margin-left: 50%
-.crypto_feedback
-	border-bottom: 2px solid #80d6e3
-	.feedback_text
-		.main_text_title
-				.main_line
-					background-color: #80d6e3	
-		.feedback_form
-			box-shadow: none
-			padding: 0px 29.82% 0px 0px
-			margin-left: 0	
-			background-color: transparent
-			.form_title
-				color: #80d6e3
-			input
-				background-color: transparent
-			button
-				background-color: #80d6e3	
-	.feedback_map
-		.feedback_map_info
-			p
-				span
-					color: #80d6e3
-.crypto_notf
-	height: 500px
-	border-bottom: 2px solid $green_main
-	display: flex
-	align-items: center
-	width: 100%
-	padding: 100px 4.3%
-	justify-content: center
-	overflow: hidden
-	flex-wrap: wrap
-	align-content: center
-	p
-		font-size: 40px
-		color: $green_main
-		text-align: center
-		width: 100%
-	a
-		background-color: $lightgray
-		display: block
-		text-decoration: none
-		color: $black
-		margin-top: 30px
-		font-size: 32px
-		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
-		div
-			padding: 10px
-		p
-			color: $black

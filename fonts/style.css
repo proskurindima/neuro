@@ -625,7 +625,7 @@
       text-decoration: none;
       font-size: 18px; }
 
-.main_feedback, .crypto_feedback {
+.main_feedback {
   padding: 0px 4.3% 100px 4.3%;
   position: relative;
   display: -webkit-box;
@@ -634,29 +634,29 @@
   -ms-flex-line-pack: center;
   align-content: center;
   border-bottom: 2px solid #00b449; }
-  .main_feedback .feedback_text, .main_feedback .feedback_map, .crypto_feedback .feedback_text, .crypto_feedback .feedback_map {
+  .main_feedback .feedback_text, .main_feedback .feedback_map {
     width: calc(50% - 15px); }
-  .main_feedback .feedback_text, .crypto_feedback .feedback_text {
+  .main_feedback .feedback_text {
     margin-right: 15px;
     padding: 20px 0px;
     position: relative;
     z-index: 3; }
-    .main_feedback .feedback_text .feedback_form, .crypto_feedback .feedback_text .feedback_form {
+    .main_feedback .feedback_text .feedback_form {
       -webkit-box-shadow: none;
       box-shadow: none;
       padding: 0px 29.82% 0px 0px;
       margin-left: 0;
       background-color: transparent; }
-      .main_feedback .feedback_text .feedback_form input, .crypto_feedback .feedback_text .feedback_form input {
+      .main_feedback .feedback_text .feedback_form input {
         background-color: transparent; }
-  .main_feedback .feedback_map, .crypto_feedback .feedback_map {
+  .main_feedback .feedback_map {
     margin-left: 15px;
       margin-left-background-color: white;
     -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 3; }
-    .main_feedback .feedback_map .feedback_map_info, .crypto_feedback .feedback_map .feedback_map_info {
+    .main_feedback .feedback_map .feedback_map_info {
       position: absolute;
       background-color: rgba(255, 255, 255, 0.75);
       bottom: 0;
@@ -664,20 +664,20 @@
       width: 100%;
       padding: 20px;
       text-align: left; }
-      .main_feedback .feedback_map .feedback_map_info p, .crypto_feedback .feedback_map .feedback_map_info p {
+      .main_feedback .feedback_map .feedback_map_info p {
         font-size: 16px;
         line-height: 1.2;
         font-weight: bold; }
-        .main_feedback .feedback_map .feedback_map_info p span, .crypto_feedback .feedback_map .feedback_map_info p span {
+        .main_feedback .feedback_map .feedback_map_info p span {
           font-weight: bold;
           color: #00b449; }
-  .main_feedback .feedback_bcg, .crypto_feedback .feedback_bcg {
+  .main_feedback .feedback_bcg {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 64.5%;
     z-index: -1; }
-    .main_feedback .feedback_bcg img, .crypto_feedback .feedback_bcg img {
+    .main_feedback .feedback_bcg img {
       width: 100%; }
 
 .main_footer {
@@ -1240,7 +1240,7 @@
       font-size: 50px;
       line-height: 1.2; }
       .crypto_head .crypto_head_text .crypto_head_title span {
-        color: #80d6e3; }
+        color: #00b449; }
     .crypto_head .crypto_head_text .crypto_head_subtitle {
       color: #767676;
       font-size: 21px;
@@ -1266,8 +1266,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative;
-  text-align: center; }
+  position: relative; }
   .crypto_info .crypto_info_img, .crypto_info .crypto_info_text {
     width: calc(50% - 15px); }
   .crypto_info .crypto_info_img {
@@ -1292,8 +1291,6 @@
       -webkit-transform: scale(2);
       -ms-transform: scale(2);
       transform: scale(2); }
-  .crypto_info .crypto_info_text .main_text_title .main_line {
-    background-color: #80d6e3; }
   .crypto_info .main_circle_img {
     position: absolute;
     z-index: -1;
@@ -1328,8 +1325,6 @@
     padding-top: 100px; }
     .crypto_items .crypto_item .crypto_item_img {
       padding-right: 8.75%; }
-    .crypto_items .crypto_item .crypto_item_text .main_text_title .main_line {
-      background-color: #80d6e3; }
   .crypto_items .crypto_item:nth-child(even) {
     padding-right: 9.75%;
     padding-left: 27.75%; }
@@ -1346,60 +1341,3 @@
       text-align: right; }
       .crypto_items .crypto_item:nth-child(even) .crypto_item_text .main_text_title .main_line {
         margin-left: 50%; }
-
-.crypto_feedback {
-  border-bottom: 2px solid #80d6e3; }
-  .crypto_feedback .feedback_text .main_text_title .main_line {
-    background-color: #80d6e3; }
-  .crypto_feedback .feedback_text .feedback_form {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    padding: 0px 29.82% 0px 0px;
-    margin-left: 0;
-    background-color: transparent; }
-    .crypto_feedback .feedback_text .feedback_form .form_title {
-      color: #80d6e3; }
-    .crypto_feedback .feedback_text .feedback_form input {
-      background-color: transparent; }
-    .crypto_feedback .feedback_text .feedback_form button {
-      background-color: #80d6e3; }
-  .crypto_feedback .feedback_map .feedback_map_info p span {
-    color: #80d6e3; }
-
-.crypto_notf {
-  height: 500px;
-  border-bottom: 2px solid #00b449;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  padding: 100px 4.3%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  overflow: hidden;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-line-pack: center;
-  align-content: center; }
-  .crypto_notf p {
-    font-size: 40px;
-    color: #00b449;
-    text-align: center;
-    width: 100%; }
-  .crypto_notf a {
-    background-color: #eeeeee;
-    display: block;
-    text-decoration: none;
-    color: #050505;
-    margin-top: 30px;
-    font-size: 32px;
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); }
-    .crypto_notf a div {
-      padding: 10px; }
-    .crypto_notf a p {
-      color: #050505; }
