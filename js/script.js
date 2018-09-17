@@ -46,6 +46,14 @@ $(document).ready(function(){
 		$('#wrap').fadeIn(400);
 		$('#window').fadeIn(400);
 	});
+  $('.crypto_item_button').click(function(){
+    $('#wrap').fadeIn(400);
+    $('#window').fadeIn(400);
+  });
+  $('.blog_content_item_button').click(function(){
+    $('#wrap').fadeIn(400);
+    $('#window').fadeIn(400);
+  });
 	$('.close').click(function(){
 		$('#wrap').fadeOut(400);
 		$('#window').fadeOut(400);
@@ -53,6 +61,18 @@ $(document).ready(function(){
 	$('#wrap').click(function(){
 		$('#wrap').fadeOut(400);
 		$('#window').fadeOut(400);
+  });
+  $('.delay_button').click(function(){
+    $('#delay_wrap').fadeIn(400);
+    $('#delay_window').fadeIn(400);
+  });
+  $('.close').click(function(){
+    $('#delay_wrap').fadeOut(400);
+    $('#delay_window').fadeOut(400);
+  });
+  $('#delay_wrap').click(function(){
+    $('#delay_wrap').fadeOut(400);
+    $('#delay_window').fadeOut(400);
 	});
 
 });
@@ -140,4 +160,9 @@ $(window).resize(function(){
     if (windowWidth < 620) {
        $('.partner_logo_items').slick('unslick');
     }
+});
+
+$(document).ready(function(){
+    $('.delay_button').delay(10000).animate({'right':'20'},500);
+
 });

@@ -4,6 +4,11 @@ $gray: #767676
 $red: #d11b1b
 $lightgray: #eeeeee
 //HOVER OFF//
+@media all and (max-width: 1280px) 
+	.main_wrapper
+		.blogs_items
+			.blogs_item_img
+				height: 240px
 @media all and (max-width: 1024px) 
 	.main_wrapper
 		.main_text_title	
@@ -49,18 +54,33 @@ $lightgray: #eeeeee
 			.web_info_items
 				.web_info_accordion
 					.web_info_accordion_item
-						.accordion_item_header:hover 
-							transform: scale(1)
-							background: #fff
+						.accordion_item_header:hover
+							background-color: #fff
 							p
 								color: $black
+								margin-left: 30px	
+
 		.partner_head
 			margin-top: 150px
-		.partner_info
+		.partner_info, .crypto_info
 			.main_circle_img
 				transform: translate(0, -41.15%)
 				width: 76%
-
+		.crypto_items
+			.crypto_item
+				.crypto_item_img
+					w20
+				.crypto_item_text
+					margin: 0px 5%
+					width: calc(100% - 42.5%)
+				.crypto_item_button
+					width: 17.5%	
+					p
+						font-size: 15px	
+		.blogs_items
+			.blogs_item_img
+				height: 190px
+	
 @media all and (max-width: 768px)
 	.main_wrapper
 		.next
@@ -97,6 +117,13 @@ $lightgray: #eeeeee
 					background-color: #fff
 			button
 				margin-top: 25px
+		.header_wrapper
+			.header
+				padding: 0px 40px
+				.main_nav
+					ul
+						li
+							padding-left: 25px
 		.main_text_title
 			p
 				font-size: 22px
@@ -141,7 +168,7 @@ $lightgray: #eeeeee
 					align-items: center
 					justify-content: center
 					margin-top: 30px
-		.main_feedback
+		.main_feedback, .crypto_feedback
 			padding-bottom: 70px
 			.feedback_map
 				width: 60%
@@ -156,7 +183,7 @@ $lightgray: #eeeeee
 			margin-top: 120px
 		.partner_info
 			padding: 50px 4.3%
-			.main_circle_img
+			.main_circle_img, .crypto_info
 				transform: translate(0, -41.15%)
 				width: 90%
 			.partner_info_left
@@ -203,6 +230,8 @@ $lightgray: #eeeeee
 				font-size: 17px	
 				width: 45%
 				top: 40%
+				ul
+					display: none
 		.main_with
 			padding: 50px 4.3%
 			.main_with_items
@@ -234,6 +263,28 @@ $lightgray: #eeeeee
 				.close
 					top: 3px
 					right: 3px
+		.crypto_items
+			.popup_form
+				.close
+					top: 3px
+					right: 3px
+			.crypto_item
+				padding: 70px 4.3% 0px 4.3%
+				.crypto_item_img
+					w20
+				.crypto_item_text
+					margin: 0px 5%
+					width: calc(100% - 42.5%)
+				.crypto_item_button
+					width: 17.5%	
+					p
+						font-size: 15px	
+		.blogs_items
+			.blogs_item_img
+				height: 140px
+
+
+
 @media all and (max-width: 760px)
 	.main_wrapper
 		.header_wrapper
@@ -243,6 +294,8 @@ $lightgray: #eeeeee
 					background-color: #fff
 					ul
 						display: none
+						li
+							width: 100%
 						.subnav
 							display: block	
 							position: relative
@@ -257,7 +310,8 @@ $lightgray: #eeeeee
 								top: 0
 
 								li
-									display: block	
+									display: block
+									width: 100%
 								li:last-child
 									margin-bottom: 0	
 					#nav_toggle
@@ -277,7 +331,7 @@ $lightgray: #eeeeee
 							margin-bottom: 10px
 @media all and (max-width: 600px)
 	.main_wrapper
-		.main_feedback
+		.main_feedback, .crypto_feedback
 			padding-bottom: 35px
 			flex-wrap: wrap
 			.feedback_text, .feedback_map
@@ -368,11 +422,11 @@ $lightgray: #eeeeee
 					font-weight: bold	
 				.main_head_subtitle
 					position: relative
-					top: 50px	
+					top: 20px	
 					font-size: 18px	
 			.main_head_ckroll
 				display: none
-		.main_about
+		.main_about, .crypto_info
 			padding-bottom: 35px	
 			.main_circle_img
 				width: 100%	
@@ -412,9 +466,10 @@ $lightgray: #eeeeee
 					align-items: center
 					justify-content: center
 					margin-top: 30px
-		.main_feedback
+		.main_feedback, .crypto_feedback
 			.feedback_text
 				margin-bottom: 35px
+				order: 1
 				.main_text_title
 					.main_line
 						margin-right: 0
@@ -422,10 +477,15 @@ $lightgray: #eeeeee
 				input
 					background: transparent
 			.feedback_map
+				order: 2
 				height: 350px
 				.feedback_map_info
 					padding: 10px
 					font-size: 15px
+					p
+						font-size: 14.5px
+						span:nth-child(2)
+							left: 60px
 			.feedback_bcg
 				width: 100%	
 				top: 0
@@ -523,7 +583,7 @@ $lightgray: #eeeeee
 			.web_head_bcg
 				width: 100%
 				left: 0
-				opacity: .8
+				opacity: .6
 			.main_title, .web_head_text
 				margin-left: 0
 				padding: 0 4.3%
@@ -574,6 +634,75 @@ $lightgray: #eeeeee
 			.footer
 				.footer_item
 					font-size: 10px
+		.crypto_head
+			margin-top: 50px
+			.crypto_head_text
+				.crypto_head_title
+					font-size: 30px
+				.crypto_head_subtitle
+					font-size: 19px	
+		.crypto_info
+			flex-wrap: wrap
+			justify-content: center	
+			padding-bottom: 0	
+			.crypto_info_text
+				width: 100%	
+				text-align: center
+				order: 1
+				margin-right: 0
+				margin-left: 0
+			.crypto_info_img
+				margin-right: 0
+				margin-left: 0
+				margin-top: 20px
+				order: 3
+				width: 70%
+		.crypto_items
+			padding-bottom: 70px
+			.popup_form
+				width: 90%	
+			.crypto_item
+				padding-top: 50px
+				flex-wrap: wrap
+				justify-content: center	
+				padding: 50px 4.3% 0px 4.3%
+				.crypto_item_text
+					order: 1
+					text-align: center
+					width: 100%	
+					.main_text_title
+						.main_line
+							margin-left: auto
+							margin-right: auto
+				.crypto_item_img
+					padding: 0
+					order: 3
+					width: 40%
+					img
+						width: 100%	
+				.crypto_item_button
+					order: 2
+					width: 50%	
+					margin: 20px 25%
+					height: 40px
+					p
+						line-height: 30px	
+			.crypto_item:nth-child(even)
+				.crypto_item_img
+					padding: 0
+		.main_blog
+			text-align: center
+			.blogs_items
+				
+				.blogs_item
+					width: 100%
+					text-align: left
+					.blogs_item_img
+						height: 220px
+					.main_line
+						margin-right: 0
+						margin-left: 0
+					
 @media all and (max-width: 375px)
 	.main_wrapper
 		.form_title
@@ -627,6 +756,19 @@ $lightgray: #eeeeee
 						font-size: 18px
 					.main_with_text
 						font-size: 14px
+		.crypto_head
+			.crypto_head_text
+				.crypto_head_subtitle
+					font-size: 17px	
+
+		.crypto_items
+			padding-bottom: 40px	
+			.crypto_item
+				padding-top: 30px	
+				.crypto_item_button
+					order: 2
+					width: 50%	
+					margin: 10px 25% 20px 25%	
 @media all and (max-width: 320px)
 	.main_wrapper
 		.form_title
@@ -665,7 +807,7 @@ $lightgray: #eeeeee
 			margin-top: 60px
 			.main_head_text
 				.main_head_title
-					font-size: 22px
+					font-size: 20px
 				.main_head_subtitle
 					top: 30px
 		.main_service
@@ -689,7 +831,7 @@ $lightgray: #eeeeee
 			.main_service_items
 				.main_service_item
 					margin-top: 0
-		.main_feedback
+		.main_feedback, .crypto_feedback
 			.feedback_text
 				margin-bottom: 15px
 		.partner_head
@@ -734,4 +876,10 @@ $lightgray: #eeeeee
 					.main_text_content
 						li
 							font-size: 14px
+		.main_blog
+			.blogs_items
+				.blogs_item
+					.blogs_item_img
+						height: 180px
+	
 
